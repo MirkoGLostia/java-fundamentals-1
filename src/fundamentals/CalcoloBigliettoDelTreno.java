@@ -17,16 +17,21 @@ public class CalcoloBigliettoDelTreno {
         System.out.println("How old are you?");
         int userAge = inputUtente.nextInt();
 
+        // variabili per i prezzi
+        double priceAtKm = 0.21;
+        double discountMinor = 0.2;
+        double discountSenior = 0.4;
 
         // calcolo costo biglietto
-        double price = distance * 0.21;
+
+        double price = distance * priceAtKm;
 
         double finalPrice = price;
 
         if (userAge < 18){
-            finalPrice = price - (price/100*20);
+            finalPrice = price * discountMinor;
         } else if (userAge > 65) {
-            finalPrice = price - (price/100*40);
+            finalPrice = price * discountSenior;
         }
 
 
