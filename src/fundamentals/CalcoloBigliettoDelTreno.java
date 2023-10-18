@@ -1,5 +1,6 @@
 package fundamentals;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class CalcoloBigliettoDelTreno {
@@ -7,6 +8,9 @@ public class CalcoloBigliettoDelTreno {
 
         // inizializzazione scanner
         Scanner inputUtente = new Scanner(System.in);
+
+        // formattazione numeri
+        DecimalFormat numberFormat = new DecimalFormat("#.00");
 
         // richiesta dati all'utente
         System.out.println("How far will you go?");
@@ -29,14 +33,14 @@ public class CalcoloBigliettoDelTreno {
         double finalPrice = price;
 
         if (userAge < 18){
-            finalPrice = price * discountMinor;
+            finalPrice = price - (price * discountMinor);
         } else if (userAge > 65) {
-            finalPrice = price * discountSenior;
+            finalPrice = price * (price * discountSenior);
         }
 
 
         System.out.print("ticket price: ");
-        System.out.println(finalPrice + " euro");
+        System.out.println(numberFormat.format(finalPrice) + " euro");
 
 
         // chiusura scanner
