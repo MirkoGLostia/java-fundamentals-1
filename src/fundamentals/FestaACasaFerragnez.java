@@ -19,7 +19,7 @@ public class FestaACasaFerragnez {
 
         // confronto nome utente nella lista con un ciclo
         for (int i = 0; i < listaInvitati.length; i++) {
-            if (nomeUtente.equals(listaInvitati[i])){
+            if (nomeUtente.toLowerCase().equals(listaInvitati[i].toLowerCase())){
                 checkList = true;
                 break;
             }
