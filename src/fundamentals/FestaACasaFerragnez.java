@@ -28,7 +28,7 @@ public class FestaACasaFerragnez {
         if (checkList){
             System.out.println("you're welcome, have a great time");
         }else {
-            System.out.println("get lost punk");
+            System.out.println("you are not in the list");
         }
 
 
